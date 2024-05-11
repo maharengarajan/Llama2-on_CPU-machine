@@ -1,4 +1,6 @@
 langchain
+langchain_community
+langchain-community
 ctransformers
 sentence-transformers
 pypdf
