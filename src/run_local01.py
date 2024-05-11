@@ -1,7 +1,7 @@
 from langchain_core.prompts import PromptTemplate
 from langchain.chains import LLMChain
 from langchain_community.llms import CTransformers
-from src.helper import DEFAULT_SYSTEM_PROMPT
+from src.helper import CUSTOM_SYSTEM_PROMPT
 
 
 B_INST, E_INST = "[INST]", "[/INST]"
@@ -11,7 +11,7 @@ B_SYS, E_SYS = "<<SYS>>\n", "\n<</SYS>>\n\n"
 instruction = "Convert the following text from English to Hindi: \n\n {text}"
 
 
-SYSTEM_PROMPT = B_SYS + DEFAULT_SYSTEM_PROMPT + E_SYS
+SYSTEM_PROMPT = B_SYS + CUSTOM_SYSTEM_PROMPT + E_SYS
 template = B_INST + SYSTEM_PROMPT + instruction + E_INST
 
 # print(SYSTEM_PROMPT)
